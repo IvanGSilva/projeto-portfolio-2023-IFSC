@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Projeto de faculdade usando form e fieldsets">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container">
+        <h1>CADASTRO PARA VAGA</h1>
+        <form action="recebe.php" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div class="stylePair">
+                    <label for="nome">Nome</label>
+                    <input id="nome" type="text"name="nome" autofocus required>
+                </div>
+                <div class="stylePair">
+                    <label for="idade">Data de Nascimento</label>
+                    <input id="idade" type="date" name="idade">
+                </div>
+                <div class="stylePair">
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" type="text" name="cpf" placeholder="Digite somente os números" required>
+                </div>
+                <div class="stylePair">
+                    <label for="numero">Número de Celular</label>
+                    <input id="numero" type="text" name="numero">
+                </div>
+                <div class="stylePair">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" required>
+                </div>
+                <div class="stylePair">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" id="sexo">
+                        <option></option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Outro</option>
+                        <option>Prefiro não responder</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço</legend>
+                <div class="stylePair">
+                    <label for="rua">Rua</label>
+                    <input type="text" name="rua" id="rua">
+                </div>
+                <div class="stylePair">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro">
+                </div>
+                <div class="stylePair">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade">
+                </div>
+                <div class="stylePair">
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" placeholder="Apenas a Sigla">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Conhecimentos e Experiências</legend>
+                <div class="stylePair">
+                    <label for="formacao">Formação Acadêmica</label>
+                    <input id="formacao" type="text" name="formacao" list="formacaoL">
+                    <datalist id="formacaoL">
+                        <option>Ensino Fundamental Incompleto</option>
+                        <option>Ensino Fundamental Completo</option>
+                        <option>Ensino Médio Incompleto</option>
+                        <option>Ensino Médio Completo</option>
+                        <option>Ensino Superior Incompleto</option>
+                        <option>Ensino Superior Completo</option>
+                    </datalist>
+                </div>
+                <div class="stylePair">
+                    <label for="local">Instituição de Ensino Mais Recente</label>
+                    <input id="local" type="text" name="local">
+                </div>
+                <div class="stylePair">
+                    <label for="curso">Curso Extra</label>
+                    <input type="text" name="curso" id="curso">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Empresa</legend>
+                <div class="stylePair">
+                    <label for="vaga">Para qual vaga você está se candidatando?</label>
+                    <input type="text" name="vaga" id="vaga" placeholder="Especifique" required>
+                </div>
+                <div class="stylePair">
+                    <label for="salario">Qual a sua pretensão salarial?</label>
+                    <input type="text" name="salario" id="salario" placeholder="$0000,00" required>
+                </div>
+                <div class="stylePair">
+                    <label for="sobre">Nos conte um pouco sobre você</label><br>
+                    <div class="textarea"><textarea name="sobre" id="sobre" rows="5" maxlenght="250"></textarea></div>
+                </div>
+                <div class="stylePair">
+                    <label for="termos"><h3>Termos de Uso</h3></label>
+                    <div class="textarea"><textarea name="termos" id="termos"rows="10" readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem veniam tenetur reprehenderit adipisci. Deleniti nisi totam ad dolorum repellat quidem, aperiam earum est ratione suscipit reprehenderit iusto eum corporis voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia alias veritatis est porro odio ad eligendi dolorem delectus voluptatem aperiam, velit debitis consectetur? Modi dignissimos, aut porro odit ex sint. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi provident odit expedita a ad, sequi molestias voluptatem, facilis et doloribus deserunt quos dolorum aliquid! Ea velit doloribus laborum veniam libero? lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus vel deserunt, nisi modi doloribus enim fugit aspernatur a soluta mollitia expedita quidem nemo quaerat. Officia, perferendis! Ratione rem exercitationem ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia vero minus libero non itaque vel in, aperiam nesciunt ad, quis nisi obcaecati aliquid cum asperiores fuga iste neque totam. Saepe! Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptate incidunt harum, dicta culpa molestias placeat quasi neque eaque pariatur natus modi dolorem. Facilis et pariatur, quibusdam voluptates porro aspernatur.</textarea></div><br>
+                    <input type="checkbox" name="aceitar" id="aceitar" required>
+                    <label for="aceitar">Aceito os Termos de Uso</label>
+                </div>
+                <div class="stylePair">
+                    <label for="senha">Senha provida por email</label>
+                    <input type="password" name="senha" id="senha">
+                </div>
+            </fieldset>
+            <div id="submit">
+                <input id="submit" type="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
